@@ -6,8 +6,8 @@
 <br>
 
 <ul>
-  <li *ngFor='let currentKeg of childKegList | runningLow: filterByRunningLow'>{{currentKeg.name}} {{currentKeg.brand}} {{currentKeg.style}} {{currentKeg.alcoholContent}} {{currentKeg.pintLeft}} {{currentKeg.price}}
+  <p [class]="styleColor(currentKeg)" *ngFor='let currentKeg of childKegList | runningLow: filterByRunningLow'>{{currentKeg.name}} {{currentKeg.brand}} {{currentKeg.style}} <span [class]="styleAlcohol(currentKeg)">{{currentKeg.alcoholContent}}</span> {{currentKeg.pintLeft}} {{currentKeg.price}}
     <button (click)="subtractPintClicked(currentKeg)">-1 pint</button>
     <button (click)="editButtonClicked(currentKeg)">Edit</button>
-  </li>
+  </p>
 </ul>

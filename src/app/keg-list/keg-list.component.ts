@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Keg } from '../models/keg.model';
+import { Keg, beerStyles } from '../models/keg.model';
 
 @Component({
   selector: 'app-keg-list',
@@ -23,5 +23,20 @@ export class KegListComponent {
 
   onChange(optionFromMenu) {
     this.filterByRunningLow = optionFromMenu;
+  }
+
+  styleColor(keg: Keg){
+    for(let i=0; i < beerStyles.length; i++)
+    {
+      if(keg.style === beerStyles[i])
+        return "style-color" + i;
+    }
+  }
+
+  styleAlcohol(keg: Keg){
+    if (keg.alcoholContent > 7)
+    {
+      return "style-bold";
+    }
   }
 }

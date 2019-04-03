@@ -12,7 +12,7 @@ export class AppComponent {
   masterKegList: Keg[] = [
     new Keg("Sour Storm", "Oakshire","Sour",6.1,5),
     new Keg("American Lager", "10 Barrell","Lager",4.3,4),
-    new Keg("Outta Line", "Rouge","West Coast IPA",7.2,6)
+    new Keg("Outta Line", "Rouge","IPA",7.2,6)
   ];
   selectedKeg: Keg = null;
 

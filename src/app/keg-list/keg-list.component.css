@@ -1,0 +1,42 @@
+
+
+.style-color0 {
+  background-color: brown;
+  color: white;
+}
+
+.style-color1 {
+  background-color: red;
+  color: white;
+}
+
+.style-color2 {
+  background-color: yellow;
+  color: orange;
+}
+
+.style-color3 {
+  background-color: #003366;
+  color: white;
+}
+
+.style-color4 {
+  background-color: #ffdf00;
+  color: orange;
+}
+
+.style-color5 {
+  background-color: green;
+  color: white;
+}
+
+.style-color6 {
+  background-color: #654321;
+  color: white;
+}
+
+.style-bold {
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+}
