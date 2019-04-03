@@ -22,6 +22,12 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Specs
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* List of all available kegs for each keg input: Name, Brand, Price, Style of Beer (color-coded), AlcoholContent (stronger AlcoholContent > 7% is bold), Pints left (124 pints per keg), Button to -1 Pint
+
+* Option to **Show** kegs with less than 10 pints left (dropdown)
+
+* Form to add **New** keg to the list
+
+* **Edit** a keg's properties after entering them
