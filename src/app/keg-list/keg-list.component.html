@@ -1,5 +1,12 @@
+<br>
+  <select (change)="onChange($event.target.value)">
+    <option value="all">All Kegs</option>
+    <option value="lowKegs">Less then 10 pints left</option>
+  </select>
+<br>
+
 <ul>
-  <li *ngFor='let currentKeg of childKegList'>{{currentKeg.name}} {{currentKeg.brand}} {{currentKeg.style}} {{currentKeg.alcoholContent}} {{currentKeg.pintLeft}} {{currentKeg.price}}
+  <li *ngFor='let currentKeg of childKegList | runningLow: filterByRunningLow'>{{currentKeg.name}} {{currentKeg.brand}} {{currentKeg.style}} {{currentKeg.alcoholContent}} {{currentKeg.pintLeft}} {{currentKeg.price}}
     <button (click)="subtractPintClicked(currentKeg)">-1 pint</button>
     <button (click)="editButtonClicked(currentKeg)">Edit</button>
   </li>

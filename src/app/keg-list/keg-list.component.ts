@@ -6,9 +6,12 @@ import { Keg } from '../models/keg.model';
   templateUrl: './keg-list.component.html',
   styleUrls: ['./keg-list.component.css']
 })
+
 export class KegListComponent {
   @Input() childKegList: Keg[];
   @Output() clickSender = new EventEmitter();
+
+  filterByRunningLow: string = "all";
 
   editButtonClicked(kegToEdit: Keg){
     this.clickSender.emit(kegToEdit);
@@ -16,5 +19,9 @@ export class KegListComponent {
 
   subtractPintClicked(kegToEdit: Keg){
     kegToEdit.pintLeft--;
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByRunningLow = optionFromMenu;
   }
 }

@@ -7,7 +7,7 @@ import { FormsModule }  from '@angular/forms';
 import { KegListComponent } from './keg-list/keg-list.component';
 import { EditKegComponent } from './edit-keg/edit-keg.component';
 import { NewKegComponent } from './new-keg/new-keg.component';
-// import { CompletenessPipe } from './completeness.pipe';
+import { RunningLowPipe } from './running-low.pipe';
 
 
 @NgModule({
@@ -15,8 +15,8 @@ import { NewKegComponent } from './new-keg/new-keg.component';
     AppComponent,
     KegListComponent,
     EditKegComponent,
-    NewKegComponent
-    // CompletenessPipe
+    NewKegComponent,
+    RunningLowPipe
   ],
   imports: [
     BrowserModule,

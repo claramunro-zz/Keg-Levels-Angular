@@ -8,3 +8,5 @@
 <app-keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></app-keg-list>
 
 <app-edit-keg [selectedKeg]="selectedKeg"  (clickedDone)="finishedEditing()"></app-edit-keg>
+
+<app-new-keg (clickedSave)="addToList($event)"></app-new-keg>
