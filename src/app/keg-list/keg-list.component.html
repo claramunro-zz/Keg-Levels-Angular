@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor='let currentKeg of childKegList'>{{currentKeg.name}} {{currentKeg.brand}} {{currentKeg.style}} {{currentKeg.alcoholContent}} {{currentKeg.pintLeft}} {{currentKeg.price}}
+    <button (click)="subtractPintClicked(currentKeg)">-1 pint</button>
+    <button (click)="editButtonClicked(currentKeg)">Edit</button>
+  </li>
+</ul>
