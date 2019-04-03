@@ -19,4 +19,8 @@ export class AppComponent {
   editKeg(clickedKeg: Keg){
     this.selectedKeg = clickedKeg;
   }
+
+  finishedEditing(){
+    this.selectedKeg = null;
+  }
 }

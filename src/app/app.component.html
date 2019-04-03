@@ -6,3 +6,5 @@
 </div>
 
 <app-keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></app-keg-list>
+
+<app-edit-keg [selectedKeg]="selectedKeg"  (clickedDone)="finishedEditing()"></app-edit-keg>
