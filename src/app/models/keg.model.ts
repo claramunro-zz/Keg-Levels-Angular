@@ -1,4 +1,4 @@
-export const beerStyles: string[] = ["Lager", "IPA", "Pilsner", "Gose", "Wheat", "Pale-Ale", "Sour"]
+//export const beerStyles: string[] = ["Lager", "IPA", "Pilsner", "Gose", "Wheat", "Pale-Ale", "Sour"]
 
 export class Keg{
   pintLeft: number = 124;

@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Keg, beerStyles } from '../models/keg.model';
+import { Keg } from '../models/keg.model';
 
 @Component({
   selector: 'app-keg-list',
@@ -9,6 +9,7 @@ import { Keg, beerStyles } from '../models/keg.model';
 
 export class KegListComponent {
   @Input() childKegList: Keg[];
+  @Input() beerStyles: string[];
   @Output() clickSender = new EventEmitter();
 
   filterByRunningLow: string = "all";
@@ -26,9 +27,9 @@ export class KegListComponent {
   }
 
   styleColor(keg: Keg){
-    for(let i=0; i < beerStyles.length; i++)
+    for(let i=0; i < this.beerStyles.length; i++)
     {
-      if(keg.style === beerStyles[i])
+      if(keg.style === this.beerStyles[i])
         return "style-color" + i;
     }
   }

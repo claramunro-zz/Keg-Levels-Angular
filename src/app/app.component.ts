@@ -9,6 +9,8 @@ import { Keg } from './models/keg.model';
 export class AppComponent {
   title: string = 'Tap Room';
 
+  beerStyles: string[] = ["Lager", "IPA", "Pilsner", "Gose", "Wheat", "Pale-Ale", "Sour"]
+
   masterKegList: Keg[] = [
     new Keg("Sour Storm", "Oakshire","Sour",6.1,5),
     new Keg("American Lager", "10 Barrell","Lager",4.3,4),

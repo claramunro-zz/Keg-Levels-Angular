@@ -5,8 +5,8 @@
   </h1>
 </div>
 
-<app-keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></app-keg-list>
+<app-keg-list [childKegList]="masterKegList" [beerStyles]="beerStyles" (clickSender)="editKeg($event)"></app-keg-list>
 
-<app-edit-keg [selectedKeg]="selectedKeg"  (clickedDone)="finishedEditing()"></app-edit-keg>
+<app-edit-keg [selectedKeg]="selectedKeg" [beerStyles]="beerStyles" (clickedDone)="finishedEditing()"></app-edit-keg>
 
-<app-new-keg (clickedSave)="addToList($event)"></app-new-keg>
+<app-new-keg [beerStyles]="beerStyles" (clickedSave)="addToList($event)"></app-new-keg>

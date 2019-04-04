@@ -1,5 +1,5 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-import { Keg, beerStyles } from '../models/keg.model';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Keg } from '../models/keg.model';
 
 @Component({
   selector: 'app-new-keg',
@@ -8,12 +8,12 @@ import { Keg, beerStyles } from '../models/keg.model';
 })
 
 export class NewKegComponent{
-
+  @Input() beerStyles: string[];
   @Output() clickedSave = new EventEmitter();
   newKeg: boolean = false;
 
   addNewKeg(name: string, brand: string, style: string, alcoholContent: number, price: number){
-    let newKeg: Keg = new Keg(name, brand, beerStyles[style], alcoholContent, price);
+    let newKeg: Keg = new Keg(name, brand, style, alcoholContent, price);
     this.clickedSave.emit(newKeg);
     this.newKeg = false;
   }
