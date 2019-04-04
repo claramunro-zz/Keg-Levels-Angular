@@ -16,7 +16,6 @@ export class AppComponent {
   ];
   selectedKeg: Keg = null;
 
-
   editKeg(clickedKeg: Keg){
     this.selectedKeg = clickedKeg;
   }
@@ -27,6 +26,5 @@ export class AppComponent {
 
   addToList(newKeg: Keg){
     this.masterKegList.push(newKeg);
-    console.log(this.masterKegList);
   }
 }

@@ -1,33 +1,38 @@
 <div>
+<div *ngIf="!newKeg">
+  <button (click)="showForm()">New Keg</button>
+</div>
+<div *ngIf="newKeg">
+    <h3>New Keg</h3>
+    <label for="name">Name:</label>
+    <input #name  ng-required="required">
 
-  <h3>New Keg</h3>
-  <label for="name">Name:</label>
-  <input #name  ng-required="required">
+    <label for="brand">Brand:</label>
+    <input #brand required>
 
-  <label for="brand">Brand:</label>
-  <input #brand required>
+    <!-- <label for="style">Style:</label>
+    <input #style required> -->
 
-  <!-- <label for="style">Style:</label>
-  <input #style required> -->
+    <label>Style:</label>
+    <select #style>
+      <option [value]="0">Lager</option>
+      <option [value]="1">IPA</option>
+      <option [value]="2">Pilsner</option>
+      <option [value]="3">Gose </option>
+      <option [value]="4">Wheat</option>
+      <option [value]="5">Pale Ale</option>
+      <option [value]="6">Stout</option>
+    </select>
 
-  <label>Style:</label>
-  <select #style>
-    <option [value]="0">Lager</option>
-    <option [value]="1">IPA</option>
-    <option [value]="2">Pilsner</option>
-    <option [value]="3">Gose </option>
-    <option [value]="4">Wheat</option>
-    <option [value]="5">Pale Ale</option>
-    <option [value]="6">Stout</option>
-  </select>
+    <label for="alcoholContent">Alcohol Content:</label>
+    <input #alcoholContent type="number" max="100" min="0" required>
 
-  <label for="alcoholContent">Alcohol Content:</label>
-  <input #alcoholContent type="number" max="100" min="0" required>
+    <label for="price">Price:</label>
+    <input #price type="number" required>
 
-  <label for="price">Price:</label>
-  <input #price type="number" required>
+    <br>
 
-  <br>
-
-  <button (click)="addNewKeg(name.value, brand.value, style.value, alcoholContent.value, price.value); name.value=''; brand.value=''; style.value=''; alcoholContent.value=''; price.value='';">Done</button>
+    <button (click)="addNewKeg(name.value, brand.value, style.value, alcoholContent.value, price.value); name.value=''; brand.value=''; style.value=''; alcoholContent.value=''; price.value='';">Done</button>
+    <button (click)="showForm()">Cancel</button>
+  </div>
 </div>
