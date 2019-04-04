@@ -19,7 +19,8 @@ export class KegListComponent {
   }
 
   subtractPintClicked(kegToEdit: Keg){
-    kegToEdit.pintLeft--;
+    if (kegToEdit.pintLeft > 0)
+      kegToEdit.pintLeft--;
   }
 
   onChange(optionFromMenu) {
